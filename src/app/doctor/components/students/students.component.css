@@ -1,0 +1,26 @@
+.students {
+    padding: 50px 0;
+}
+.students h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color:#c00;
+
+}
+table {
+        width: 100%;
+        font-family:sans-serif;
+ 
+
+      
+    }
+
+            td {
+                background-color:#eee;   
+                font-size: 20px; 
+              }
+              th {
+                background-color:#009;
+                color:#fff;
+                font-size: 22px;
+              }

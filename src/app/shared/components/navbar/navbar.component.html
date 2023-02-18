@@ -1,0 +1,42 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg " dir="rtl">
+    <div class="container">
+        <div class="end my-2 my-lg-0">
+        <i class="fa fa-graduation-cap fa-3x" style="color: #ffff;" aria-hidden="true"></i>
+    <a class="navbar-brand" href="#" style="color: #ffff; font-size: 25px;font-weight: 700;">Final Exam App </a>
+    </div>
+    <button  mat-icon-button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <mat-icon class="navbar-toggler-icon" ></mat-icon></button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item p-2" *ngIf="user?.role == 'doctor'">
+          <a class="nav-link" routerLink="/new-exam" style="color: #ffff; font-size: 20px;font-weight: 500;"> New Exam <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item p-2" *ngIf="user?.role == 'doctor'">
+          <a class="nav-link"  routerLink="/students"  style="color: #ffff; font-size: 20px;font-weight: 500;">Students</a>
+        </li>
+        <li class="nav-item p-2" *ngIf="user !== null">
+          <a class="nav-link" routerLink="/subjects" style="color: #ffff; font-size: 20px;font-weight: 500;">Subjects</a>
+        </li>
+        <li class="nav-item p-2" *ngIf="user !== null" (click)="logout()">
+            <button mat-raised-button color="primary"class="nav-link"  routerLink="/login" style="color: #ffff; font-size: 20px;font-weight: 500;" >Logout</button>
+          </li>
+        <li class="nav-item p-2" *ngIf="user == null">
+            <button mat-raised-button color="warn" class="nav-link "  routerLink="/login"  style="color: navy; font-size: 20px;font-weight: 500; background-color: #ffff; border: 1px solid navy;" >Login</button>
+          </li>
+          <li class="nav-item p-2" *ngIf="user == null">
+            <button mat-raised-button color="primary" class="nav-link" routerLink="/register" style="color: #ffff; font-size: 20px;font-weight: 500;">Sign Up</button>
+          </li>
+          <li class="nav-item p-2"  *ngIf="user !== null">
+            <button mat-raised-button color="warn" class="nav-link" class="button">{{user?.username}}</button>
+         </li>
+        
+      </ul>
+    </div>
+
+    
+</div>
+  </nav>
+
+  
