@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
- baseApi:"http://localhost:3000/",
+ baseApi:"https://quiz-app-api-vvmj-8z44z9phd-bassamramadan2611.vercel.app/",
+
   production: false
 };
 
