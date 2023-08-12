@@ -10,29 +10,27 @@ import { environment } from 'src/environments/environment';
 export class AuthService {
 
 
-
   constructor(private http:HttpClient) { }
-
   user = new Subject()
   createUser(model:any) {
-    return this.http.post('https://quiz-app-api-vvmj-8z44z9phd-bassamramadan2611.vercel.app/students' , model)
+    return this.http.post(environment.baseApi+'students' , model)
   }
 
   login(model:any) {
-    return this.http.put("https://quiz-app-api-vvmj-8z44z9phd-bassamramadan2611.vercel.app/login/1" , model)
+    return this.http.put(environment.baseApi+'login/1' , model)
   }
 
   getUsers(type:string){
-    return this.http.get("https://quiz-app-api-vvmj-8z44z9phd-bassamramadan2611.vercel.app/"+type)
+    return this.http.get(environment.baseApi+type)
   }
 
   getStudent(id:number) {
-    return this.http.get("https://quiz-app-api-vvmj-8z44z9phd-bassamramadan2611.vercel.app/students" +id)
+    return this.http.get(environment.baseApi+"students/"+id)
   }
   updateStudent(id:number , model:any) {
-    return this.http.put("https://quiz-app-api-vvmj-8z44z9phd-bassamramadan2611.vercel.app/students" +id , model)
+    return this.http.put(environment.baseApi+"students/"+id , model)
   }
   getRole() {
-    return this.http.get("https://quiz-app-api-vvmj-8z44z9phd-bassamramadan2611.vercel.app/login/1")
+    return this.http.get(environment.baseApi+'login/1')
   }
 }
